@@ -36,21 +36,43 @@ Use your service.
 service.multiply(MultiplicationArgs.create(2, 3)).execute().body(); // -> 6
 ```
 
-# Download
+# Add jsonrpc to your project
 
-*Note*: Only snapshot releases are available currently.
 
-Download [the latest JAR](https://oss.sonatype.org/content/repositories/snapshots/com/segment/retrofit/jsonrpc/jsonrpc/) or grab via Maven:
+Maven:
+- Add Jitpack repository
+```xml
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+
+- Add the dependency
 ```xml
 <dependency>
-  <groupId>com.segment.retrofit.jsonrpc</groupId>
-  <artifactId>jsonrpc</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.github.milczarekIT.retrofit-jsonrpc</groupId>
+    <artifactId>jsonrpc</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
 or Gradle:
 
+- Add Jitpack repository
 ```groovy
-compile 'com.segment.retrofit.jsonrpc:jsonrpc:1.0.0-SNAPSHOT'
+allprojects {
+	repositories {
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+- Add the dependency
+```groovy
+dependencies {
+    implementation 'com.github.milczarekIT.retrofit-jsonrpc:jsonrpc:1.0.0'
+}
 ```
